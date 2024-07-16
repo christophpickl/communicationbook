@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{mdwlist} % list without bullet symbol \{itemize*}
+\usepackage{wrapfig} % wrap text around image
+\usepackage{csquotes} % for displayquote env
+
+\newlength\mystoreparindent
+\newenvironment{leftindent}[0]{
+    \setlength{\mystoreparindent}{\the\parindent}
+    \setlength{\parindent}{0pt}
+    }{
+    \setlength{\parindent}{\mystoreparindent}
+}
+\setcounter{tocdepth}{0} % only chapters in ToC
+\setcounter{secnumdepth}{0} % no numbering of sections
+
+\title{Communication Book}
+\date{\today}
+\author{Christoph Pickl}
+
+\input{glossary}
+
+\begin{document}
+
+%\pagenumbering{gobble}
+%\pagenumbering{arabic}
+
+    \maketitle
+
+    \tableofcontents
+    \vfill
+    \begin{center}
+        \textit{Every judgement is a tragic expression of an unmet need.}
+    \end{center}
+    \vfill
+    \noindent
+    \small{Get in contact: \url{https://christophpickl.github.io/communicationbook/}}
+    \newpage
+
+
+    \input{chapters/about}
+
+%\listoffigures
+%\listoftables
+    \printglossaries
+
+\end{document}

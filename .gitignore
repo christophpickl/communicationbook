@@ -1,0 +1,19 @@
+.DS_Store
+.idea/
+*.iml
+communicationbook.pdf
+
+# latex
+*.aux
+*.log
+*.synctex.gz
+*.out
+*.toc
+*.lof
+*.lot
+
+# glossary
+*.glg
+*.glo
+*.gls
+*.ist
