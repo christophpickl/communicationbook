@@ -1,10 +1,43 @@
-\documentclass[a4paper,12pt]{book}
+\documentclass[11pt]{book}
+\usepackage{geometry}
+\geometry{
+    paper=a5paper,
+    margin=54pt,
+    includeheadfoot
+}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{mdwlist} % list without bullet symbol \{itemize*}
 \usepackage{wrapfig} % wrap text around image
-\usepackage{csquotes} % for displayquote env
+
+\usepackage{csquotes} % for displayquote env ... use "\q{Some text.}{Author}" instead
+\newcommand{\q}[2]{\begin{displayquote}``\textit{#1}'' -- #2\end{displayquote}}
+
+\newcommand{\header}[2]{
+    \vspace{1em}
+    \noindent\textbf{#1:} #2
+    \vspace{0.4em}
+    \hrule
+    \vspace{0.4em}
+}
+
+\newenvironment{exercise}[1]{
+    \header{Exercise}{#1}
+    }{
+    \hrule
+}
+
+\newenvironment{example}[1]{
+    \header{Example}{#1}
+    \begin{itemize*}
+        }{
+    \end{itemize*}
+    \hrule
+}
+\newcommand{\exampleItem}[2]{\item #1: ``\textit{#2}''}
+\newcommand{\exampleItemX}[2]{\item #1 -- #2}
+
 
 \newlength\mystoreparindent
 \newenvironment{leftindent}[0]{
@@ -32,7 +65,7 @@
     \tableofcontents
     \vfill
     \begin{center}
-        \textit{Every judgement is a tragic expression of an unmet need.}
+        \textit{Every judgement, criticism, diagnosis, and expression of anger is a tragic expression of an unmet need.}
     \end{center}
     \vfill
     \noindent
@@ -41,6 +74,13 @@
 
 
     \input{chapters/about}
+    \input{chapters/background}
+    \input{chapters/basics}
+    \input{chapters/mechanics}
+    \input{chapters/empathy}
+    \input{chapters/gratitude}
+    \input{chapters/honesty}
+    \input{chapters/advanced}
 
 %\listoffigures
 %\listoftables
