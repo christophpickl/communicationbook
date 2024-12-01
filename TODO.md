@@ -36,3 +36,4 @@ CHAPTERS
 * go through book(s)
 * go through videos (3hrs one)
 * https://www.youtube.com/@GiraffeNVC 
+* yoram 2hr "ask for the moon" workshop recording: https://www.youtube.com/watch?v=AJ-ctpWQkZA
